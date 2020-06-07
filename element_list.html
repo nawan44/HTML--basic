@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>List Element</title>
+        <style>
+            div ol {
+                list-style: armenian;
+            }
+            div ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+            }
+            div ul li {
+                float: left;
+            }
+            div li a {
+                text-decoration: none;
+                color: black;
+                padding: 10px 20px;
+                height: 20px;
+                display: block;
+                background-color: blueviolet;
+                text-transform: uppercase;
+            }
+            div ul a:hover {
+                color: white;
+                background-color: violet;
+            }
+        </style>
+    </head>
+    <body>
+        <p>Cara memasak</p>
+        <ol type="A" start="3">
+            <li>Siapkan bahan</li>
+            <li>Mencuci</li>
+            <li>Memasak</li>
+            <li>Makan</li>
+        </ol>
+        <div>
+            <p>Cara memasak</p>
+            <ol >
+                <li>Siapkan bahan</li>
+                <li>Memasak</li>
+            </ol>
+        </div>
+
+        <p>Jenis aplikasi web browser</p>
+        <ul style="list-style-type: circle;">
+            <li>Google Chrome</li>
+            <li>Mozilla</li>
+            <li>Edge</li>
+            <li>Opera</li>
+            <li>Safari</li>
+        </ul>
+        <div>
+            <ul>
+                <li>
+                    <a href="google.html">Google Chrome</a>
+                </li>
+                <li>
+                    <a href="google.html">Mozilla</a>
+                </li>
+                <li>
+                    <a href="google.html">Edge</a>
+                </li>
+                <li>
+                    <a href="google.html">Opera</a>
+                </li>
+                <li>
+                    <a href="google.html">Safari</a>
+                </li>
+            </ul>
+        </div>
+        <div style="margin-top: 40px;">
+            <br>
+        <p>Istilah-istilah dalam networking:</p>
+        <dl>
+            <dt>CDMA</dt>
+            <dd>Code Division Multiple Access, sebuah teknologi selular digital yang
+                menggunakan teknik spread-spectrum.</dd>
+            <dt>EDGE</dt>
+            <dd>Enhanced Data rates for GSM Evolution adalah teknologi evolusi dari GSM dan
+                IS-136.</dd>
+            <dt>GPRS</dt>
+            <dd>The General Packet Radio Service, adalah suatu teknologi yang memungkinkan
+                pengiriman dan penerimaan data lebih cepat dibandingkan dengan penggunaan
+                teknologi Circuit Switch Data atau CSD</dd>
+
+            <dt>GSM</dt>
+            <dd>Global System for Mobile Communication, adalah sebuah teknologi komunikasi
+                selular yang bersifat digital.</dd>
+        </dl>
+        </div>
+    </body>
+</html>
