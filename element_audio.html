@@ -3,16 +3,37 @@
     <head>
         <meta charset="UTF-8">
         <title>
-            Audio HTML
+            Audio & Video HTML
         </title>
         <style>
-            audio{
+            audio {
                 margin-top: 30px;
             }
         </style>
     </head>
     <body>
         <h1>Example Audio</h1>
-        <audio src="audio/lagu.mp3" controls preload="meta">My Audio</audio>
+        <audio controls="controls">
+            <source
+                src="audio/lagu.mp3"
+                controls="controls"
+                preload="meta"
+                type="audio/mp3">
+            <p>
+                Sorry, you cannot play this audio file. Please update your web browser or use
+                another web browser. As an alternative, you can download the audio file on the
+                following link: :
+                <a href="Lagu.mp3">Lagu mp3</a>
+            </p>
+        </audio>
+        <br>
+        <br>
+        <video poster = "image/aku.jpg" controls width="70%" height="300px"> 
+        <source src="video/React-transition.mp4"  >
+        Sorry, you cannot play this audio file. Please update your web browser or use
+        another web browser. As an alternative, you can download the audio file on the
+        following link: :
+        <a href="video/React-transition.mp4">Video React Transition</a>
+        </video>
     </body>
 </html>
