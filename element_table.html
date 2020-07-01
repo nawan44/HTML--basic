@@ -11,10 +11,14 @@
             td{
                 border: 7px solid green;
             }
+            tr:nth-child(even){
+                background-color: blueviolet;
+            }
         </style>
     </head>
     <body>
-        <table border="1" " cellspacing="6">
+
+        <table border="1" align="left" colspan="2" cellspacing="6">
             <tr>
                 <td>Row1, Column1</td>
                 <td>Row1, Column2</td>
@@ -28,9 +32,9 @@
                 <td>Row3, Column2</td>
             </tr>
         </table>
-<br>
-<br>
-        <table>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque nisi justo, aliquam at finibus sit amet, efficitur quis ipsum. Proin ut pharetra felis.</p>
+
+        <table align="right">
             <tr>
                 <td>Row1, Column1</td>
                 <td>Row1, Column2</td>
@@ -43,6 +47,79 @@
                 <td>Row3, Column1</td>
                 <td>Row3, Column2</td>
             </tr>
+        </table>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque nisi justo, aliquam at finibus sit amet, efficitur quis ipsum. Proin ut pharetra felis.</p>
+            
+        <table width=80% height=300 cellpadding=5 align="center" bgcolor=aqua>
+            <tr>
+                <td width=10% >Row1, Column1</td>
+                <td width=30%>Row1, Column2</td>
+                <td>Row1, Column3</td>
+            </tr>
+            <tr>
+                <td>Row2, Column1</td>
+                <td>Row2, Column2</td>
+                <td rowspan="2"></td>>Row2, Column3</td>
+            </tr>
+            <tr>
+                <td valign="top">Row3, Column1</td>
+                <td valign="botom">Row3, Column2</td>
+                <td align="center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque nisi justo, aliquam at finibus sit amet, efficitur quis ipsum. Proin ut pharetra felis.</td>
+
+            </tr>
+        </table>
+        <br>
+        <br>
+        <table>
+            <caption align="bottom">Caption Table 4</caption>
+            <colgroup>
+            <col style="background-color: blueviolet;">
+            <col style="background-color: chartreuse;">
+            <col style="background-color: chocolate;">
+            </colgroup>
+            <tr> 
+                <th>Th1</th>
+                <th>Th2</th>
+            </tr>
+            <tr>
+                <td>Row1, Colmn1</td>
+                <td>Row1, Colmn2</td>
+            </tr>
+            <tr>
+                <td>Row2, Colmn1</td>
+                <td>Row2, Colmn2</td>
+            </tr>
+        </table>
+
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Saving</th>
+                </tr>
+            </thead>
+            <tfoot>
+                <tr>
+                    <td></td>
+                    <td>Total</td>
+                    <td>---</td>
+                    <td>350.000</td>
+                </tr>
+            </tfoot>
+            <tbody>
+                <td>1.</td>
+                <td><a href="http://w3school.com">W3 School</td>
+                <td><p>Site <em>education</em> programming <b>in the world</b></p></td>
+                <td><img src="image/aku.jpg" width="100"></td>
+                <tr>
+                    <td>2.</td>
+                    <td><a href="http://google.com">Google</td>
+                    <td>Google</td>
+                    <td><img src="image/Bundaran hi.jpg" width="100"></td>
+                </tr>
+            </tbody>
         </table>
     </body>
 </html>
