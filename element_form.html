@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Form HTML</title>
+    </head>
+    <body>
+       <h1>FORM REGISTRATION</h1> 
+        <form action="#" method="POST" enctype="multipart/form-data" target="_blank">
+            <p>Username : <input type="text" maxlength="7" name="username"></p>
+            <p>Password : <input type="password" maxlength="10" name="password"> </p>
+            <p>Name     : <input type="text" maxlength="20" name="name_user" placeholder="Rachmat Gunawan"></p>
+            <p>Address  : <input type="text" maxlength="100" name="address_user" placeholder="KH Ahmad Junaedi Street"></p>
+            <p>Skill :
+                <p><label><input type="checkbox" name="target1" value="PHP">PHP</label></p>
+                <p><label><input type="checkbox" name="target2" value="Java">Java</label></p>
+                <p><label><input type="checkbox" name="target3" value="Javascript">Javascipt</label></p>
+                <p><label><input type="checkbox" name="target4" value="Golang">Golang</label></p>
+                <p><label><input type="checkbox" name="target5" value="Ruby">Ruby</label></p>
+            </p>
+            <br><hr>
+            <p><input type="checkbox" name="target1" value="learn" id="learn">
+            <label for="learn"> Learn</label>
+            </p>
+            <p><input type="checkbox" name="target2" value="pro" id="pro">
+                <label for="pro"> Pro</label>
+                </p>
+<br>
+            <p>Gender :
+                <p><input type="radio" name="jenis_kelamin" value="male">Male</p>
+                <p><input type="radio" name="jenis_kelamin" value="female">Female</p>
+            </p>
+            <p> Role :
+                <select name="role" size="3" multiple>
+                    <optgroup label="Web">
+                    <option value="frontend">Frontend</option>
+                    <option value="backend">Backend</option>
+                    <option value="fullstack">Fullstack</option>
+                    <optgroup label="Mobile">
+                    <option value="android">Android</option>
+                    <option value="ios">ios</option>
+                </select>
+            </p>
+             <p><input type="file" name="image" accept="image/*"></p>
+            <p><inphut type="hidden" name="token" value="1234567"></p>
+             <br>
+
+            Message :
+            <p>
+                <textarea name="message" rows="5" cols="50" maxlength="100"></textarea></p>
+            <p><input type="image" name="Send" src="image/tombol.png" width="40">
+                <input type="reset" value="Reset">
+            </p>
+            <p><input type="button" value="check"
+                onclick="alert('Data tidak sesuai')"
+                /></p>
+
+        </form>
+    </body>
+</html>
