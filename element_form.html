@@ -6,18 +6,24 @@
     </head>
     <body>
        <h1>FORM REGISTRATION</h1> 
-        <form action="#" method="POST" enctype="multipart/form-data" target="_blank">
+        <form action="#" method="POST" enctype="multipart/form-data" target="_blank" id="form_registration">
+            <p>No ID : <input type="text" name="no_id" placeholder="AA111" pattern="[A-z]{3}[0-9][3]"></p>
+            <p>Email    : <input type="email" name="email" autocomplete="on" autofocus></p>
+            <p>No HP : <input type="tel" name="tel" required></p>
+            <p>Date   : <input type="datetime-local" name="date" min="2020-05-01" max="2020-05-31" required></p>
             <p>Username : <input type="text" maxlength="7" name="username"></p>
             <p>Password : <input type="password" maxlength="10" name="password"> </p>
             <p>Name     : <input type="text" maxlength="20" name="name_user" placeholder="Rachmat Gunawan"></p>
             <p>Address  : <input type="text" maxlength="100" name="address_user" placeholder="KH Ahmad Junaedi Street"></p>
-            <p>Skill :
+            <fieldset>
+            <legend align="center">SKILL :</legend> 
                 <p><label><input type="checkbox" name="target1" value="PHP">PHP</label></p>
                 <p><label><input type="checkbox" name="target2" value="Java">Java</label></p>
                 <p><label><input type="checkbox" name="target3" value="Javascript">Javascipt</label></p>
                 <p><label><input type="checkbox" name="target4" value="Golang">Golang</label></p>
                 <p><label><input type="checkbox" name="target5" value="Ruby">Ruby</label></p>
-            </p>
+            
+        </fieldset>
             <br><hr>
             <p><input type="checkbox" name="target1" value="learn" id="learn">
             <label for="learn"> Learn</label>
@@ -26,6 +32,10 @@
                 <label for="pro"> Pro</label>
                 </p>
 <br>
+            <p>Age : <input type="number" min="1" step="0.1"
+                max="99" name="age"></p>
+            <p><input type="range" step="3" min="0" max="99"    
+            onchange="updateValueSlider(this.value);" >Education :</p>
             <p>Gender :
                 <p><input type="radio" name="jenis_kelamin" value="male">Male</p>
                 <p><input type="radio" name="jenis_kelamin" value="female">Female</p>
@@ -41,20 +51,61 @@
                     <option value="ios">ios</option>
                 </select>
             </p>
+            <p><input type="url" name="site" ></p>
              <p><input type="file" name="image" accept="image/*"></p>
             <p><inphut type="hidden" name="token" value="1234567"></p>
              <br>
-
-            Message :
+            <p>Search<input type="search" name="search"></p>
             <p>
-                <textarea name="message" rows="5" cols="50" maxlength="100"></textarea></p>
-            <p><input type="image" name="Send" src="image/tombol.png" width="40">
-                <input type="reset" value="Reset">
+                <datalist id="list_city">
+                    <option value="Jakarta Pusat">
+                    <option value="Jakarta Timur">
+                    <option value="Bekasi">
+                    <option value="Depok">
+                    <option value="Bogor">
+                    <option value="Tangerang">
+                </datalist>
+               City : <input type="text" name="city" list="list_city">
             </p>
+            Message :
+            <p><textarea name="message" rows="5" cols="50" maxlength="100"></textarea></p>
+            <p><input type="image" name="Send" src="image/tombol.png" width="40">
+                <input type="reset" value="Reset"></p>
             <p><input type="button" value="check"
-                onclick="alert('Data tidak sesuai')"
-                /></p>
+                onclick="alert('Data tidak sesuai')"/></p>
 
         </form>
+        <p><input type="color" name="color" form="form_registration" ></p>
+       <p><input type="submit" value="Kirim Data ke Register"
+        formaction="register.php" formmethod="POST" formtarget="_blank" formenctype="multipart/form-data"></p>
+        <p contenteditable="true" id="editor">You can edit this text </p>
+        <button onclick="getText()">Copy Text</button>
+        <br><br>
+        <div id="container" style="background-color: yellow; width: 100px; height: 30px;" ></div>
+        <br><br>
+        <iframe id="editor2">        </iframe>
+            <br>
+            <button onclick="startEdit2()">Start Edit</button>
+            <button onclick="getText2()">Show Text</button>
+            <br><br>
+            <div id="container2" style="background-color: chartreuse;"></div>
+
+        <script>
+            function updateValueSlider(val){
+                document.getElementById('value').innerHTML=val;
+            }
+            function getText(){
+                let a = document.getElementById("editor").innerHTML;
+                document.getElementById("container").innerHTML=a;
+            }
+            function startEdit2(){
+                let editor2=document.getElementById("editor2");
+                editor2.contentWindow.document.designMode="on";
+            }
+            function getText2(){
+                document.getElementById("container2").textContent=
+                editor2.contentWindow.document.body.innerHTML;
+            }
+        </script>
     </body>
 </html>
