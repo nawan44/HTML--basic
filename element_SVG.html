@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>SVG Element</title>
+        <style>
+            svg{
+                border: 1px solid red;
+            }
+        </style>
+    </head>
+    <body>
+        <svg xlmns="http://www.w3.org/2000/svg" width="1000" height="1200" >
+            <!--LINE -->
+            <line x1="50" y1="50" x2="450" y2="50" stroke="blue" stroke-width="5" />
+            <line x1="50" y1="100" x2="450" y2="100" stroke="blue" stroke-width="5" stroke-linecap= "butt" stroke-dasharray="5,5" />
+            <line x1="50" y1="150" x2="450" y2="150" stroke="blue" stroke-width="5" stroke-linecap="round" stroke-dasharray="10,10"/>
+            <line x1="50" y1="200" x2="450" y2="200" stroke="blue" stroke-width="5" stroke-linecap="square" stroke-dasharray="20,5,5,5"/>
+            
+            <!-- SQUARE -->
+            <rect x="50" y="250" width="400" height="200" stroke="black" stroke-width="10" fill="yellow" rx="10" ry="10" />
+            <!-- CIRCLE -->
+            <circle cx="600" cy="150" r="100" stroke="black" stroke-width="10" fill="green" />
+            <!-- ELIPSE -->
+            <ellipse cx="650" cy="350" rx="150" ry="50" stroke="black" stroke-width="5" fill="orange"></ellipse>
+            <!-- STAR -->
+            <polygon points="150, 510, 90, 698, 240, 578, 60, 578, 210, 698" stroke="brown"
+            stroke-width="3" fill="magenta"/>
+            <!-- TRIANGLE -->
+            <polygon points="750, 500, 850, 650, 650, 650" stroke="brown" stroke-width="10" fill="lime"/>
+            <!-- POLYLINE -->
+            <polyline  points="0,40 40,40 40,80 80,80 80,120 120,120 120,160" stroke="black" stoke="5" fill="white"/>
+            <!-- TEXT -->
+            <text x="100" y="35" fill="brown" font-family="Arial" font-size="40">TEXT SVG</text>
+
+
+        </svg>
+    </body>
+</html>
