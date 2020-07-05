@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Canvas Element</title>
+        <style>
+            canvas{
+                border: 3px solid red;
+            }
+        </style>
+        <script src="js/myhtml.js"></script>
+    </head>
+    <body>
+        <canvas id="mypaper" width="2000" height="2000"></canvas>
+        <script>
+let ourcanvas = document.getElementById("mypaper");
+let context = ourcanvas.getContext("2d");
+// TRIANGLE
+context.lineWidth = 20;
+context.strokeStyle ="green";
+
+context.moveTo(10,10);
+context.lineTo(400,200);
+context.lineTo(400,50);
+context.lineTo(10,10);
+context.stroke();
+
+context.closePath();
+context.fillStyle = "blue";
+context.fill();
+
+// // SQUARE
+// context.lineWidth = 20;
+// context.strokeStyle="black";
+
+// context.moveTo(50,300);
+// context.lineTo(50,500);
+// context.lineTo(400,500);
+// context.lineTo(400,300);
+// context.lineTo(40,300);
+// context.stroke();
+
+// context.closePath();
+// context.fillStyle="yellow";
+// context.fill();
+
+context.lineWidth=10;
+context.strokeStyle="black";
+context.rect(50, 200, 200, 200);
+context.stroke();
+
+
+context.lineWidth=30;
+context.strokeRect(450,100,200,200);
+
+// //CIRCLE
+context.arc(450, 450, 100, 0, 2*Math.PI);
+context.stroke();
+
+context.fill();
+
+// //TEXT
+context.font = 'bold 25pt Calibri';
+context.fillText('Study Web Programming', 30, 550);
+context.fillStyle="blue";
+
+//HOME
+context.lineWidth=10;
+//wall
+context.strokeRect(725,140,150,110);
+//door
+context.fillRect(780, 190, 40, 60);
+//roof
+context.beginPath();
+context.moveTo(700, 140);
+context.lineTo(800, 60);
+context.lineTo(900, 140);
+context.closePath();
+context.stroke();
+//text
+context.font = 'bold 15pt Calibri';
+context.fillText('My Home', 760, 165);
+context.fillStyle="blue";
+
+        </script>
+    </body>
+</html>
