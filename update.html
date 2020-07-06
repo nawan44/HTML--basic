@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Update HTML 5</title>
+    </head>
+    <style>
+        summary {
+            cursor:pointer;
+            background-color:  #fe9a43;
+            color: black;
+            padding: 10px;
+            font-size: 1.2em;
+            border-bottom: white 2px solid;
+        }
+        summary:hover{
+            background-color:#f7a65f ;
+        }
+        summary+div{
+            background-color:#ffeddd ;
+            padding: 5px 20px;
+        }
+
+    </style>
+    <body>
+        <picture>
+            <source srcset="image/coffee_cup_big.jpg" media="(min-width:850px)">
+            <source srcset="image/coffee_cup_medium.jpg" media="(min-width:500px)" />
+            <img src="image/coffee_cup_small.jpg" alt="A Cup of Coffee">
+        </picture>
+        <br><br><br>
+        <details>
+            <summary>HTML</summary>
+            <div>
+            <p>Hypertext Markup Language (HTML) is the standard markup language for documents designed to be displayed in a web browser.</p>
+        </div>
+        </details>
+        <details open>
+            <summary>CSS</summary>
+            <div>
+            <p>A style sheet language used for describing the presentation of a document written in a markup language like HTML</p>
+        </div>
+        </details>
+        <button id="mybutton">SHOW</button>
+        <dialog id="mydialog">
+            <p>Hi, Welcome</p>
+        </dialog>
+
+        <script>
+            var mybutton = document.getElementById('mybutton');
+            var mydialog = document.getElementById('mydialog');
+
+            mybutton.addEventListener('click', function(){
+                mydialog.setAttribute("open","open");
+            });
+        </script>
+    </body>
+</html>
